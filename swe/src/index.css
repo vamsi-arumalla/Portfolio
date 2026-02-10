@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-bg: #050505;
+  --color-surface: #111111;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #888888;
+  --color-accent: #0096FF;
+
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Skills Section - Glassmorphism */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 0;
+  margin-top: 2rem;
+}
+
+.skill-chip {
+  /* The Glass Look */
+  background: rgba(255, 255, 255, 0.05);
+  /* Semi-transparent white */
+  /* The "frosted" blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  /* Border & Shape */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px 20px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+
+  /* The Glow Effect - Adapted to Gold Theme */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 150, 255, 0.1);
+
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-chip:hover {
+  /* Interactive Glow on Hover */
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  border: 1px solid rgba(0, 150, 255, 0.5);
+  /* Brighten border on hover */
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+  /* Intense glow on hover */
+}
+
+/* Experience Timeline - Glassmorphism Horizontal */
+/* Experience Timeline - Glassmorphism Horizontal */
+/* Experience Timeline - Vertical Stack */
+.timeline-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  padding-top: 20px;
+  padding-left: 30px;
+  /* Space for vertical line */
+  display: flex;
+  flex-direction: column;
+  /* Vertical stack */
+  gap: 40px;
+  /* Space between cards */
+  overflow-x: visible;
+  /* Disable horizontal scroll */
+  padding-bottom: 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  /* The Vertical Line */
+}
+
+/* Remove the horizontal line pseudo-element as we use border-left now */
+.timeline-container::before {
+  display: none;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  /* Stretch to full width */
+  width: 100%;
+  /* Ensure full width */
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* The Glowing Dot - Removed as per request */
+.timeline-dot {
+  display: none;
+}
+
+/* The Glass Card */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  /* Equal height cards */
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  /* Lift up instead of scale */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+.timeline-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  /* Muted color instead of accent */
+  font-weight: 700;
+  margin-bottom: 15px;
+  /* Increased from 8px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px 0;
+  /* Reduced from 15px */
+  color: var(--color-accent);
+  /* Highlight title with accent color */
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.timeline-content li {
+  margin-bottom: 10px;
+}
+
+/* Mini Skills inside Timeline */
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.timeline-skill-chip {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.timeline-skill-chip:hover {
+  background: rgba(0, 150, 255, 0.15);
+  border-color: rgba(0, 150, 255, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    padding-top: 0;
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .timeline-container::before {
+    display: none;
+  }
+
+  .timeline-dot {
+    left: -40px;
+    top: 5px;
+    transform: none;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+}
+
+/* Navbar Glass Chips */
+.nav-chip {
+  /* The Glass Look */
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  /* Border & Shape */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  /* Slightly tighter radius for nav */
+  padding: 8px 20px;
+
+  /* Typography */
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  /* Ensure no underline */
+
+  /* The Glow Effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 150, 255, 0.1);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  border: 1px solid rgba(0, 150, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+  color: #fff;
+  /* Ensure text stays white */
+}
+
+/* Tech Stack Grid - Categorized */
+.ts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.ts-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  /* Equal height */
+}
+
+.ts-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(0, 150, 255, 0.4);
+  /* Gold Border on Hover */
+}
+
+.ts-card h3 {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.ts-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Tech Stack Chips */
+.ts-chip {
+  background: rgba(0, 150, 255, 0.1);
+  /* Gold Tint */
+  border: 1px solid rgba(0, 150, 255, 0.2);
+  color: var(--color-accent);
+  /* Gold Text */
+  padding: 8px 16px;
+  /* Increased padding for icon */
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  /* Flex for Icon Alignment */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ts-chip:hover {
+  background: rgba(0, 150, 255, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+  /* Makes icons white to match your dark theme */
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.ts-chip:hover .skill-icon {
+  transform: scale(1.2);
+  /* Slight pop effect on hover */
+  filter: none;
+  /* Shows the original brand colors on hover */
+}
+
+/* Background Glow Effect */
+.ts-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 150, 255, 0.15), transparent 70%);
+  /* Gold Glow */
+  pointer-events: none;
+}
+
+/* Project Tech Chips (Glassmorphism) */
+.project-tech-chip {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #e0e0e0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+
+.project-tech-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 150, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Menu Sub-Button Hover */
+.menu-sub-button:hover {
+  background: rgba(0, 150, 255, 0.2) !important;
+  border-color: rgba(0, 150, 255, 0.8) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.5) !important;
+}
+
+/* Apple-Style Header */
+.apple-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  /* Standard Apple navbar height */
+  background: rgba(0, 0, 0, 0.8);
+  /* Dark background with transparency */
+  /* The frosted glass effect */
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle border for definition */
+}
+
+.nav-content {
+  width: 100%;
+  max-width: 1000px;
+  /* Constrains the width like Apple's site */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a,
+.nav-logo,
+.resume-text {
+  color: #f5f5f7;
+  /* Apple's off-white text color */
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-links a:hover,
+.nav-logo:hover,
+.resume-text:hover {
+  opacity: 1;
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Specific styling for the Resume CTA to make it stand out slightly */
+.nav-resume-icon {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Header Utilities (Search + Resume) */
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  outline: none;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  margin-right: 0;
+}
+
+/* When active, the search bar expands */
+.search-container.active #search-input {
+  width: 150px;
+  opacity: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-right: 10px;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Vanta.js Background */
+/* Vanta.js Background */
+#background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Ensures it stays behind your content */
+  /* Hardware acceleration */
+  pointer-events: all;
+  /* Allows mouse controls for Vanta */
+}
+
+/* Glassmorphic sections shift slightly on scroll */
+section {
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Code Stream Animation */
+.code-stream-line {
+  position: absolute;
+  bottom: -20px;
+  color: rgba(0, 150, 255, 0.15);
+  /* Very subtle electric blue */
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-800px);
+    /* Move way up */
+    opacity: 0;
+  }
+}
