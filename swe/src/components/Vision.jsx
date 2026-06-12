@@ -29,40 +29,35 @@ const TiltCard = ({ children }) => {
 const Vision = () => {
     const experiences = [
         {
-            title: "Software Development Engineer | Capgemini",
-            date: "Feb 2024 – Present",
+            title: "Software Engineer | Amazon",
+            date: "Feb 2025 – Present",
             description: [
-                "Migrated monolithic systems to microservices, improving stability by 40% and reducing costs by 30%.",
-                "Designed automated test infrastructure using Kubernetes and CI/CD to block unstable builds."
+                "Own eight Java microservices on EKS that ingest payment events, enrich transaction context, and score fraud risk in real time — in the critical path of every evaluated payment.",
+                "Re-architected anomaly detection from delayed batch scoring to a Kafka streaming pipeline, collapsing detection latency from 10+ minutes to under 5 seconds so high-risk transactions are blocked before settlement.",
+                "Established SLO-driven reliability with error budgets, Prometheus/Grafana dashboards, and actionable alerting, helping sustain 99.98% availability.",
+                "Delivered React/TypeScript investigation dashboards consolidating transaction anomalies, risk signals, and analyst workflows into a single triage interface."
             ],
-            skills: ["Microservices", "Kubernetes", "CI/CD"]
+            skills: ["Java", "Kafka", "EKS", "DynamoDB", "SLOs"]
         },
         {
-            title: "Research Assistant | Sacred Heart University",
-            date: "Sep 2023 – Dec 2023",
+            title: "Software Engineer | Capgemini",
+            date: "Feb 2024 – Jan 2025",
             description: [
-                "Developed developer-facing APIs that reduced average response latency by 35%.",
-                "Shortened production release cycles by 70% using Docker and Kubernetes pipelines."
+                "Developed Spring Boot, Kafka, and PostgreSQL microservices on Azure for high-volume financial transaction processing, exposing REST and GraphQL APIs through OpenAPI-defined contracts.",
+                "Engineered idempotent event processing with retry handling, reconciliation workflows, and Kafka partition tuning, preventing duplicate transaction records during downstream failures.",
+                "Automated release promotion with Docker, Helm, and Azure DevOps pipelines, replacing manual deployment steps with repeatable, environment-specific delivery."
             ],
-            skills: ["APIs", "Docker", "Kubernetes"]
+            skills: ["Spring Boot", "Kafka", "PostgreSQL", "Azure", "Helm"]
         },
         {
-            title: "Software Development Engineer | S7 Works",
+            title: "Software Engineer | S7 Works",
             date: "Jan 2021 – Jul 2022",
             description: [
-                "Improved service resilience by 45% through design of release-critical backend infrastructure.",
-                "Applied SRE principles (SLIs/SLOs) to ensure reliable operation under variable loads."
+                "Cut inter-service communication failures by 41% across Kubernetes applications through service discovery, network isolation, and fault-containment patterns.",
+                "Introduced CI/CD with Jenkins, Argo CD, and Terraform, enabling automated zero-downtime deployments across 5+ backend services.",
+                "Automated infrastructure provisioning and health-check monitoring, reducing manual operational work and preventing configuration drift."
             ],
-            skills: ["Backend", "SRE", "Infrastructure"]
-        },
-        {
-            title: "Software Engineer | Shiash Info Tech",
-            date: "Aug 2018 – Dec 2020",
-            description: [
-                "Optimized backend services for 100K+ daily requests, maintaining sub-250ms latency through performance tuning.",
-                "Reduced inter-service failures by 40% by deploying distributed, containerized architectures that improved observability."
-            ],
-            skills: ["Distributed Systems", "Containers", "Performance"]
+            skills: ["Kubernetes", "Jenkins", "Argo CD", "Terraform"]
         }
     ];
 
@@ -95,7 +90,7 @@ const Vision = () => {
                         My Engineering Philosophy
                     </h3>
                     <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.8' }}>
-                        I believe that great software is defined by its stability in production.
+                        Great software is defined by its stability in production. I build systems where milliseconds matter — moving fraud intervention ahead of settlement, keeping availability at 99.98%, and treating reliability as a feature, not an afterthought.
                     </p>
                 </motion.div>
 

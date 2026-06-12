@@ -8,37 +8,50 @@ const TechStack = () => {
     const { setHighlightedSkill } = usePortfolio();
     const categories = [
         {
-            title: "Languages",
-            skills: ["Java", "Python", "JavaScript", "SQL", "Bash"]
+            title: "Languages & Backend",
+            skills: ["Java", "Spring Boot", "Python", "TypeScript", "React", "SQL"]
         },
         {
-            title: "Cloud & Infra",
-            skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Helm"]
+            title: "Distributed Systems",
+            skills: ["Kafka", "Kafka Streams", "Event-Driven", "Stream Processing", "Idempotency"]
         },
         {
-            title: "Reliability (SRE)",
-            skills: ["Prometheus", "Grafana", "Alertmanager", "Observability"]
+            title: "Cloud & Infrastructure",
+            skills: ["AWS", "Kubernetes", "Docker", "Helm", "Terraform"]
         },
         {
-            title: "Architecture",
-            skills: ["Kafka", "Microservices", "Distributed Systems", "Low-Latency"]
+            title: "Data Stores",
+            skills: ["PostgreSQL", "DynamoDB", "Redis", "Elasticsearch"]
+        },
+        {
+            title: "Reliability & Delivery",
+            skills: ["Prometheus", "Grafana", "SLOs/SLIs", "GitHub Actions", "Argo CD", "Jenkins"]
         }
     ];
 
     const skillIcons = {
         "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        "Spring Boot": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
         "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-        "Bash": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+        "Kafka": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg",
+        "Kafka Streams": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg",
+        "AWS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
         "Kubernetes": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
         "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-        "Terraform": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
-        "CI/CD": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
         "Helm": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg",
+        "Terraform": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
+        "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "DynamoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg",
+        "Redis": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+        "Elasticsearch": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg",
         "Prometheus": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
         "Grafana": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
-        "Kafka": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg",
+        "GitHub Actions": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+        "Argo CD": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg",
+        "Jenkins": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
     };
 
     return (

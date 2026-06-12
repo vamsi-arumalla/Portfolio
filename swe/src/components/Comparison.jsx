@@ -5,6 +5,36 @@ import { usePortfolio } from '../context/PortfolioContext';
 
 const projects = [
     {
+        title: "Distributed Log Ingestion & Query Platform",
+        subtitle: "Fault-Tolerant Stream Processing at Scale",
+        description: "Designed a fault-tolerant log ingestion and query platform built on partitioned Kafka topics, horizontally scaled stateless processors, and replayable at-least-once streams — validated under injected node failures and 10x burst traffic.",
+        github: null,
+        features: [
+            {
+                title: "Resilient Ingestion Pipeline",
+                text: "Partitioned Kafka topics with backpressure controls and replayable at-least-once delivery, validated by injecting node failures and verifying zero data loss on recovery."
+            },
+            {
+                title: "Hot/Cold Tiered Storage",
+                text: "Implemented tiered storage across hot processors and S3 cold storage, balancing query latency against storage cost for high-volume log retention."
+            },
+            {
+                title: "Lag-Aware Autoscaling",
+                text: "Built autoscaling driven by consumer lag rather than CPU, maintaining stable p95 query latency under 10x burst traffic."
+            },
+            {
+                title: "Fast Failover",
+                text: "Stateless processor design enabled recovery in under 60 seconds during failover tests, with Prometheus tracking lag, throughput, and recovery time."
+            }
+        ],
+        techStack: {
+            "Streaming": ["Kafka", "Partitioned Topics", "Backpressure", "At-Least-Once Delivery"],
+            "Platform": ["Kubernetes", "Horizontal Autoscaling", "Stateless Processors"],
+            "Storage": ["S3", "Hot/Cold Tiering"],
+            "Observability": ["Prometheus", "p95 Latency Tracking", "Failure Injection"]
+        }
+    },
+    {
         title: "Metavision 3D",
         subtitle: "Spatial Data Analysis & Visualization Platform",
         description: "Developed a full-stack analytical platform designed for the alignment, imputation, and 3D visualization of complex spatial datasets. The system features a modular architecture that separates high-performance computational geometry from a responsive, interactive web interface.",
@@ -171,15 +201,17 @@ const ProjectItem = ({ item, index }) => {
                             {/* Description */}
                             <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '2rem', maxWidth: '800px' }}>
                                 {item.description}
-                                <a
-                                    href={item.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '1rem', color: 'var(--color-accent)', textDecoration: 'none' }}
-                                    title="View on GitHub"
-                                >
-                                    <Github size={18} style={{ marginRight: '5px' }} /> GitHub
-                                </a>
+                                {item.github && (
+                                    <a
+                                        href={item.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '1rem', color: 'var(--color-accent)', textDecoration: 'none' }}
+                                        title="View on GitHub"
+                                    >
+                                        <Github size={18} style={{ marginRight: '5px' }} /> GitHub
+                                    </a>
+                                )}
                             </p>
 
                             {/* Features Grid */}

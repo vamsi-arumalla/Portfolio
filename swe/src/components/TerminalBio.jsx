@@ -69,7 +69,7 @@ const TerminalBio = () => {
                     margin: 0,
                     fontWeight: 300
                 }}>
-                    I am a <strong style={{ color: '#fff', fontWeight: 600 }}>Software Development Engineer</strong> with over 3 years of experience dedicated to building systems that are not only high-performing but also inherently reliable. My expertise lies in designing and operating scalable <span style={{ color: 'var(--color-accent)' }}>developer tools</span>, <span style={{ color: 'var(--color-accent)' }}>test automation frameworks</span>, and <span style={{ color: 'var(--color-accent)' }}>low-latency infrastructure</span>.
+                    I am a <strong style={{ color: '#fff', fontWeight: 600 }}>backend engineer at Amazon</strong> focused on low-latency distributed systems, stream processing, and high-availability cloud services. I build the ingestion and decisioning layer of Amazon's real-time payment fraud platform — evaluating <span style={{ color: 'var(--color-accent)' }}>450+ transactions per second</span> (~39M/day) on Java, Kafka, EKS, DynamoDB, and SQS. I re-architected fraud detection from 10-minute batch scoring to <span style={{ color: 'var(--color-accent)' }}>sub-5-second streaming</span>, with deep expertise in <span style={{ color: 'var(--color-accent)' }}>event-driven architecture</span>, reliability engineering, and production observability.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '1.5rem' }}>
                     <span style={{ color: 'var(--color-accent)', fontFamily: 'monospace' }}>$</span>

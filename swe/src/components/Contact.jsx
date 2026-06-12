@@ -17,14 +17,14 @@ const Contact = () => {
                     Get in Touch
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
-                    <a href="mailto:arumalla7175@gmail.com" style={{
+                    <a href="mailto:arumallav7@gmail.com" style={{
                         fontFamily: 'var(--font-body)',
                         fontSize: '1.2rem',
                         color: 'var(--color-accent)',
                         borderBottom: '1px solid var(--color-accent)',
                         paddingBottom: '2px'
                     }}>
-                        arumalla7175@gmail.com
+                        arumallav7@gmail.com
                     </a>
                     <a href="tel:+14752279997" style={{
                         fontFamily: 'var(--font-body)',

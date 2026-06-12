@@ -36,11 +36,22 @@ const Hero = () => {
                     fontFamily: 'var(--font-heading)',
                     fontSize: 'clamp(2.5rem, 5vw, 5rem)',
                     lineHeight: '1.1',
-                    marginBottom: '2rem'
+                    marginBottom: '1.5rem'
                 }}>
-                    Software Development <br />
-                    <span style={{ color: '#fff' }}>Engineer</span>
+                    Backend Engineer for <br />
+                    <span style={{ color: '#fff' }}>Real-Time Distributed Systems</span>
                 </h1>
+                <p style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
+                    color: 'var(--color-text-muted)',
+                    maxWidth: '640px',
+                    margin: '0 auto 2rem',
+                    lineHeight: '1.7'
+                }}>
+                    Building the ingestion and decisioning layer of Amazon's real-time payment
+                    fraud platform — 450+ transactions per second, scored in under 5 seconds.
+                </p>
 
             </motion.div>
 
